@@ -1,0 +1,128 @@
+/* General body styling with gradient background */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #4c73ac;
+  background: linear-gradient(to right, #3498db, #8e44ad); /* Blue to purple gradient */
+}
+
+/* Header styling with gradient background and rounded corners */
+.header {
+  background: linear-gradient(135deg, #42af52, #36a148);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0 0 15px 15px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header .nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header .nav-menu ul li {
+  margin: 0 15px;
+}
+
+.header .nav-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.4s ease;
+}
+
+.header .nav-menu ul li a:hover {
+  color: #f39c12;
+}
+
+/* Main content area with rounded corners */
+.main-content {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.main-content .text-section {
+  margin-bottom: 2rem;
+}
+
+.main-content .text-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4c73ac;
+}
+
+.main-content .text-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Image and video styling with rounded borders */
+.main-content .images-section img,
+.main-content .video-section video {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border: 3px solid #42af52;
+  border-radius: 10px;
+}
+
+/* Footer styling with gradient background and rounded corners */
+.footer {
+  background: linear-gradient(135deg, #42af52, #36a148);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 15px 15px 0 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Compatibility with older Firefox versions */
+@-moz-document url-prefix() {
+  .header,
+  .footer {
+    background: -moz-linear-gradient(135deg, #42af52, #36a148);
+  }
+  body {
+    background: -moz-linear-gradient(to right, #3498db, #8e44ad); /* Blue to purple gradient */
+  }
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .header .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header,
+  .footer {
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .header .nav-menu ul li {
+    margin: 10px 0;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+}
